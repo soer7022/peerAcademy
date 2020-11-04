@@ -10,10 +10,17 @@ var torrentId = 'magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10&dn
 client.add(torrentId, function (torrent) {
   // Torrents can contain many files. Let's use the .mp4 file
   var file = torrent.files.find(function (file) {
-    return file.name.endsWith('.mp4')
+    return file.name.endsWith('.mp4') 
   })
 
   // Display the file by adding it to the DOM.
   // Supports video, audio, image files, and more!
-  file.appendTo('body')
+  file.renderTo('video#torrent')
 })
+
+function printTime() {
+  element = document.getElementById('torrent')
+  console.log(element.currentTime/60)
+} 
+
+setInterval(printTime,5000)
