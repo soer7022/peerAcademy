@@ -1,0 +1,30 @@
+{
+  "name": "peeracademy",
+  "version": "1.0.0",
+  "description": "PeerAcademy is a peer to peer video platform intended for university students to view and annotate lectures",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "build-old": "browserify main.js -o static/bundle.js",
+    "build": "browserify main.js > static/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soer7022/peerAcademy.git"
+  },
+  "author": "Søren Eriksen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soer7022/peerAcademy/issues"
+  },
+  "homepage": "https://github.com/soer7022/peerAcademy#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "serve-static": "^1.14.1",
+    "webtorrent": "^0.110.1"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "watchify": "^3.11.1"
+  }
+}
